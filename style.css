@@ -8,3 +8,111 @@ body {
     font-family: 'Mali', sans-serif;
     color: rgb(51, 51, 51);
 }
+button {
+    font-family: 'Mali', sans-serif;
+}
+
+path,
+i,
+svg {
+    pointer-events: none;
+}  
+
+.colors {
+    min-height: 80vh;
+    display: flex;
+    color: rgb(211, 211, 211);
+}
+
+.color {
+    height: 80vh;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    overflow: hidden;
+}
+.color h2 {
+    font-size: 2rem;
+    cursor: pointer;
+}
+.sliders {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0%;
+    background: rgb(255, 255, 255);
+    opacity: 0;
+    width: 80%;
+    padding: 1rem;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+    pointer-events: none;
+    /* Adding the adjustment class */
+    /* transform: translateY(100px); */
+    transition: all 0.5s ease-in-out;
+
+}
+
+.sliders.active {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0px);
+}
+
+.sliders button {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    border: none;
+    padding: 0.5rem;
+    color: white;
+    background-color: rgb(58, 41, 41);
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;     
+}
+
+
+.panel {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 20vh;
+    text-align: center;
+}
+
+.panel button {
+    padding: 1rem 2rem; 
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin: 1rem;
+    border: none;
+    background-color: rgb(31,33,63);
+    color: white;
+    border-radius: 1rem;
+}
+
+.panel p {
+    font-size: 1.2rem;
+}
+
+
+.adjust,
+.lock {
+    background: none;
+    font-size: 2.5rem;
+    border: none;
+    margin: 1rem 0rem;
+    cursor: pointer;
+
+
+}
